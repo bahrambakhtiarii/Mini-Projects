@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+
+        <input id="diplay" readonly>
+
+
+        <div class="keyboard">
+
+            <div class="numbers">
+                <button class="num" onclick="addDisply('1')">1</button>
+                <button class="num" onclick="addDisply('2')">2</button>
+                <button class="num" onclick="addDisply('3')">3</button>
+                <button class="num" onclick="addDisply('4')">4</button>
+                <button class="num" onclick="addDisply('5')">5</button>
+                <button class="num" onclick="addDisply('6')">6</button>
+                <button class="num" onclick="addDisply('7')">7</button>
+                <button class="num" onclick="addDisply('8')">8</button>
+                <button class="num" onclick="addDisply('9')">9</button>
+                <button class="num" onclick="addDisply('0')">0</button>
+                <button class="num" onclick="addDisply('.')">.</button>
+            </div>
+
+            <div class="operators">
+                <button class="opr" onclick="addDisply('-')">-</button>
+                <button class="opr" onclick="addDisply('+')">+</button>
+                <button class="opr" onclick="addDisply('*')">*</button>
+                <button class="opr" onclick="addDisply('/')">%</button>
+                <button class="opr" onclick="calculat()">=</button>
+                <button class="opr" onclick="clearDisply()">C</button>
+            </div>
+
+        </div>     
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
