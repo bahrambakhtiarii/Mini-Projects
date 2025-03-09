@@ -1,0 +1,38 @@
+*{
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background: linear-gradient(135deg, #f2f2f2, #e0eafc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.DisplayColor{
+  display: flex;
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+}
+input#getColor{
+  width: 300px;
+  max-width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
