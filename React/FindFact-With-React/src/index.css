@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.main-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.main-content input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.main-content input[type="number"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.main-content input[type="number"]:focus {
+  border-color: #fff;
+}
+.main-content select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: darkgray;
+  font-size: 16px;
+  outline: none;
+  appearance: none; 
+  transition: border-color 0.3s ease;
+}
+.main-content select:focus {
+  border-color: #fff;
+}
+
+.main-content button {
+  width: 100%;
+  padding: 12px;
+  background: #ff6f61;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.main-content button:hover {
+  background: #ff3b2f;
+}
+.show-fact {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.show-fact {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)), url('https://via.placeholder.com/400x200'); 
+  background-size: cover;
+  backdrop-filter: blur(15px); 
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.show-fact::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(270deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ff62, #00ffee, #0047ff, #7a00ff, #ff00d4, #ff0000);
+  background-size: 400% 400%;
+  animation: rgbBorder 6s linear infinite;
+  z-index: -1;
+  border-radius: 15px;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  padding: 4px;
+}
+
+@keyframes rgbBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.choselang {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  direction: ltr; 
+}
+
+.choselang input {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.choselang input:active, 
+.choselang input.selected {
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3);
+  background: #bbb;
+}
