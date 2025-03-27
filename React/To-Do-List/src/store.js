@@ -76,21 +76,6 @@ export default createStore({
 
     /****************Functions****************/
 
-    // filteredTasks: computed((state) => {
-    //     switch (state.filter) {
-    //         case 'completed':
-    //             return state.allTasks.filter(task => task.status === 'completed');
-    //         case 'pending':
-    //             return state.allTasks.filter(task => task.status === 'pending');
-    //         case 'essential':
-    //         case 'normal':
-    //         case 'unnecessary':
-    //             return state.allTasks.filter(task => task.category === state.filter);
-    //         default:
-    //             return state.allTasks;
-    //     }
-    // }),
-
     deleteTask: action((state, id) => {
         state.allTasks = state.allTasks.filter((task) => task.id !== id);
         localStorage.setItem("dataTasks", JSON.stringify(state.allTasks)); 
